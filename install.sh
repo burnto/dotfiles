@@ -13,17 +13,11 @@ function link_file {
     ln -sf ${source} ${target}
 }
 
-if [ "$1" = "vim" ]; then
-    for i in _vim*
-    do
-       link_file $i
-    done
-else
-    for i in _*
-    do
-        link_file $i
-    done
-fi
+
+for i in _*
+do
+    link_file $i
+done
 
 git submodule sync
 git submodule init
@@ -32,6 +26,9 @@ git submodule foreach git pull origin master
 git submodule foreach git submodule init
 git submodule foreach git submodule update
 
-# setup command-t
-# cd _vim/bundle/command-t
-# rake make
+if [ -d gitconfig ]
+then
+    mv ../.gitconfig ../.gitconfig.bak
+    cp -f _gitconfig ../.gitconfig
+    cat gitconfig/* >> ../.gitconfig
+fi
