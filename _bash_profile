@@ -65,7 +65,7 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; f
 ### Python 2.6.5 + Virtualenv!
 
 export PATH=/usr/local/share/python:/usr/local/Cellar/python2.6/2.6.5/bin:/usr/local/Cellar/python/2.7.1/bin:$PATH
-source /usr/local/Cellar/python2.6/2.6.5/bin/virtualenvwrapper.sh
+source /usr/local/share/python/virtualenvwrapper.sh
 export PYTHONPATH=:
 
 ### CUDA
