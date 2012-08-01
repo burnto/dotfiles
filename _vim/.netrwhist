@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/brfitzgerald/projects/www/project'
+let g:netrw_dirhist_2='/Users/brfitzgerald/projects/www/project/cabin'
+let g:netrw_dirhist_3='/Users/brfitzgerald/projects/www/project/cabin/templates'
+let g:netrw_dirhist_4='/Users/brfitzgerald/projects/www/project/cabin/templates/site'
+let g:netrw_dirhist_5='/Users/brfitzgerald/projects/www'
+let g:netrw_dirhist_6='/Users/brfitzgerald/projects/www/project'
+let g:netrw_dirhist_7='/Users/brfitzgerald/projects/www/project/cabin'
+let g:netrw_dirhist_8='/Users/brfitzgerald/projects/www/project'
+let g:netrw_dirhist_9='/Users/brfitzgerald/projects/www/project/cabin'
