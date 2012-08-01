@@ -35,3 +35,7 @@
 [pygithooks]
   pep8-ignore = E501,E261,E302
   pep8-exclude = ^.*/migrations/.*.py
+[user]
+	name = Brent Fitzgerald
+[credential]
+	helper = osxkeychain
