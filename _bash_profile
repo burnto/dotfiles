@@ -1,13 +1,9 @@
 #!/bin/bash
 
-# Set our shell to use emacs key bindings, not motherfucking vim.
+# Set our shell to use emacs key bindings
 set -o emacs
 
-# This is my machine
-export HOSTNAME=bpf
-
 ### Aliases!
-
 alias ls="ls -F"
 alias rm="rm -i"
 
@@ -18,22 +14,15 @@ alias gc='git commit'
 alias gd='git diff'
 alias gl='git log --stat'
 
-alias lumber='cd ~/lumber/code'
-alias lumberweb='cd ~/lumber/code/www && workon wwwlumber'
-
 ### Path!
-
-#export PATH=.:/usr/local/sbin:/usr/local/bin:~/bin:$PATH
 export PATH=/usr/local/apache2/bin:/usr/local/mysql/bin:$PATH
 export PATH=/Applications/eclipse:$PATH
 export PATH=.:~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/ruby/1.8.7-p249/bin:$PATH
 
 # Java!
-
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 
 # Editor!
-
 #export EDITOR="mvim -f"
 export EDITOR="subl -w"
 
@@ -44,28 +33,21 @@ export CLICOLOR="true"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
 ### QT blargh
-
 export QMAKESPEC="macx-g++"
 
 ### Build against MySQL libraries!
-
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib/
 
 ### Node
-
 export NODE_PATH=/usr/local/lib/node
 
 # RVM stuff
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
-
-
 ### Python 2.6.5 + Virtualenv!
-
 export PATH=/usr/local/share/python:/usr/local/Cellar/python2.6/2.6.5/bin:/usr/local/Cellar/python/2.7.1/bin:$PATH
 source /usr/local/Cellar/python2.6/2.6.5/bin/virtualenvwrapper.sh
-export PYTHONPATH=:
-
+export PYTHONPATH=:/usr/local/lib/python2.6/site-packages:$PYTHONPATH
 export PIP_DOWNLOAD_CACHE=$HOME/.pip-download-cache/
 
 ### CUDA
@@ -90,7 +72,6 @@ export CMAKE_C_COMPILER_ENV_VAR=CC
 export CMAKE_CXX_COMPILER_ENV_VAR=CXX
 
 ### git sweetness, with branch in the prompt
-
 source ~/.git-completion.sh
 
 # Set the base PS1
@@ -102,10 +83,12 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 eval "$(hub alias -s)"
 #source ~/.hub.bash_completion.sh
 
-workon home || mkvirtualenv home && workon home
+# workon home || mkvirtualenv home && workon home
 
-
-
-# Gist
+# Github/Gist
 export GITHUB_USER="burnto"
+
+# Go
+export GOROOT=/usr/local/Cellar/go/1.0.2
+export PATH=$PATH:$GOROOT/bin
 
