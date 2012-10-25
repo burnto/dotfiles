@@ -92,3 +92,6 @@ export GITHUB_USER="burnto"
 export GOROOT=/usr/local/Cellar/go/1.0.2
 export PATH=$PATH:$GOROOT/bin
 
+
+# rbenv
+eval "$(rbenv init -)"
