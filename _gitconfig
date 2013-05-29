@@ -1,3 +1,7 @@
+[core]
+    whitespace = trailing-space,space-before-tab
+[apply]
+    whitespace = fix
 [color]
   branch = auto
   diff = auto
@@ -19,9 +23,8 @@
   ui = true
 [core]
   whitespace=nowarn
-  excludesfile = /Users/brent/.gitignore
+	excludesfile = /Users/brfitzgerald/.gitignore_global
   autocrlf = input
-  editor = /usr/local/bin/subl -w -n
 [alias]
   unstage = reset HEAD
   pretty-log-color = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --no-merges
@@ -39,3 +42,7 @@
 	name = Brent Fitzgerald
 [credential]
 	helper = osxkeychain
+[push]
+	default = current
+[url "https://"]
+	insteadOf = git://
