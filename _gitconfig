@@ -25,6 +25,8 @@
   whitespace=nowarn
 	excludesfile = /Users/brfitzgerald/.gitignore_global
   autocrlf = input
+	editor = mvim -f
+	pager = less -F -X
 [alias]
   unstage = reset HEAD
   pretty-log-color = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --no-merges
