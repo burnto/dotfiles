@@ -101,3 +101,8 @@ export ANDROID_HOME="$HOME/android/adt-bundle-mac-x86_64-20130219/sdk"
 export LC_ALL=en_US.UTF-8
 
 export LANG=en_US.UTF-8
+
+
+# Don't correct me, zsh
+unsetopt correct_all
+unsetopt correct
