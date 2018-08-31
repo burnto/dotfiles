@@ -14,7 +14,6 @@ fi
 
 export TERM=xterm-256color
 
-
 # General
 export PATH="$HOME/bin:$PATH"
 
@@ -38,3 +37,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias gd='git diff'
+alias gs='git status'
