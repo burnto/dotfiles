@@ -16,6 +16,7 @@ git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 cd dotfiles
 git pull
 stow zsh
+stow tmux
 stow vim
 vim +'PlugInstall --sync' +qa
 ```
