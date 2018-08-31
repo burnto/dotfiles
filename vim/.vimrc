@@ -16,6 +16,13 @@ nmap ; :buffers<cr>
 nmap <leader>t :files<cr>
 nmap <leader>r :tags<cr>
 
+set number
+
+set laststatus=2
+if !has('gui_running')
+  set t_co=256
+endif
+
 " disable folding
 set nofoldenable
 

@@ -12,6 +12,9 @@ if ! zgen saved; then
   zgen save
 fi
 
+export TERM=xterm-256color
+
+
 # General
 export PATH="$HOME/bin:$PATH"
 
