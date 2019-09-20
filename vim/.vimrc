@@ -17,6 +17,9 @@ nmap ; :buffers<cr>
 nmap <leader>t :files<cr>
 nmap <leader>r :tags<cr>
 
+" preferred backspace behavior
+set bs=2
+
 set number
 
 set laststatus=2
