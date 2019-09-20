@@ -24,7 +24,7 @@ unsetopt correct
 export EDITOR=/usr/bin/vim
 
 # Go
-export GOPATH="$HOME/Projects/go"
+export GOPATH="$HOME/go"
 export PATH="$(go env GOROOT)/bin:$GOPATH/bin:$PATH"
 
 # Python
