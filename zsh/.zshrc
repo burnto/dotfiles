@@ -40,3 +40,6 @@ export NVM_DIR="$HOME/.nvm"
 
 alias gd='git diff'
 alias gs='git status'
+alias gl='git log'
+
+setopt no_share_history
