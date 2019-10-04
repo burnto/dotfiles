@@ -11,6 +11,12 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'purescript-contrib/purescript-vim'
+Plug 'ajh17/VimCompletesMe'
+Plug 'Chiel92/vim-autoformat'
+Plug 'jiangmiao/auto-pairs'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
 
 call plug#end()
 
@@ -25,7 +31,8 @@ set number
 
 set laststatus=2
 if !has('gui_running')
-  set t_co=256
+	set background=dark
+	set t_Co=256
 endif
 
 " disable folding
@@ -45,3 +52,6 @@ xmap ga <plug>(easyalign)
 
 " start interactive easyalign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" don't give the "ATTENTION" message when an existing swap file is found.
+set shortmess+=A
