@@ -43,3 +43,5 @@ alias gs='git status'
 alias gl='git log'
 
 setopt no_share_history
+
+[ -f $HOME/.secrets ] && source $HOME/.secrets
