@@ -4,6 +4,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -13,27 +15,37 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'purescript-contrib/purescript-vim'
 Plug 'ajh17/VimCompletesMe'
 Plug 'Chiel92/vim-autoformat'
-Plug 'jiangmiao/auto-pairs'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-
+Plug 'morhetz/gruvbox'
+Plug '907th/vim-auto-save'
 
 call plug#end()
+
 
 nmap ; :buffers<cr>
 nmap <leader>t :files<cr>
 nmap <leader>r :tags<cr>
 
-" preferred backspace behavior
-set bs=2
-
 set number
 
 set laststatus=2
+
 if !has('gui_running')
 	set background=dark
 	set t_Co=256
 endif
+
+" use modern full color
+set termguicolors
+
+" setup gruvbox with hard contrast
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
+
+" preferred backspace behavior
+set bs=2
+
 
 " disable folding
 set nofoldenable
@@ -55,3 +67,7 @@ nmap ga <Plug>(EasyAlign)
 
 " don't give the "ATTENTION" message when an existing swap file is found.
 set shortmess+=A
+
+" better whitespace
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
