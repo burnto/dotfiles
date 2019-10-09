@@ -1,7 +1,6 @@
 
 call plug#begin('~/.vim/plugged')
 
-
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
@@ -22,10 +21,8 @@ Plug '907th/vim-auto-save'
 
 call plug#end()
 
-
-nmap ; :buffers<cr>
-nmap <leader>t :files<cr>
-nmap <leader>r :tags<cr>
+nnoremap <leader><leader> :Files<CR>
+nnoremap <leader><CR>     :Buffers<CR>
 
 set number
 
