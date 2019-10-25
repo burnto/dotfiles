@@ -18,16 +18,22 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'morhetz/gruvbox'
 Plug '907th/vim-auto-save'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
-nnoremap <leader><leader> :Files<CR>
+" Easy fzf file search and buffer search
+nnoremap <leader><leader> :GFiles<CR>
+nnoremap <leader>fi       :Files<CR>
 nnoremap <leader><CR>     :Buffers<CR>
 
+" Show line numbers
 set number
 
+" Show the status bar always
 set laststatus=2
 
+" Set dark mode and term colors
 if !has('gui_running')
 	set background=dark
 	set t_Co=256
@@ -43,17 +49,17 @@ colorscheme gruvbox
 " preferred backspace behavior
 set bs=2
 
-
 " disable folding
 set nofoldenable
 
-set completeopt=menu
+set completeopt=longest,menuone
 set showcmd
 
 " use spaces instead of tabs
-set tabstop=4     " width of a tab
-set shiftwidth=4  " indents have width 4
-set softtabstop=4 " number of columns for a tab
+set tabstop=2     " width of a tab
+set shiftwidth=2  " indents have width 2
+"set completeopt=menu
+set softtabstop=2 " number of columns for a tab
 set expandtab     " expand tabs to spaces
 
 " start interactive easyalign in visual mode (e.g. vipga)
@@ -68,3 +74,6 @@ set shortmess+=A
 " better whitespace
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+
+" highlight search
+set hlsearch
