@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-surround'
+Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'
@@ -13,12 +13,14 @@ Plug 'itchyny/lightline.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'purescript-contrib/purescript-vim'
 Plug 'ajh17/VimCompletesMe'
-Plug 'Chiel92/vim-autoformat'
+Plug 'dense-analysis/ale'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'morhetz/gruvbox'
 Plug '907th/vim-auto-save'
 Plug 'vim-airline/vim-airline'
+Plug 'mattn/emmet-vim'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -35,8 +37,8 @@ set laststatus=2
 
 " Set dark mode and term colors
 if !has('gui_running')
-	set background=dark
-	set t_Co=256
+  set background=dark
+  set t_Co=256
 endif
 
 " use modern full color
@@ -74,6 +76,17 @@ set shortmess+=A
 " better whitespace
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm=0
 
 " highlight search
 set hlsearch
+
+" autoindentation
+set autoindent
+
+" autoformat
+noremap <F3> :Autoformat<CR>
+" autoformat on save
+au BufWrite * :Autoformat
+
+"let g:formatterpath = ['/usr/local/bin']
