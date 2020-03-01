@@ -21,6 +21,7 @@ Plug '907th/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 Plug 'mattn/emmet-vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'tpope/vim-markdown'
 
 call plug#end()
 
@@ -28,6 +29,12 @@ call plug#end()
 nnoremap <leader><leader> :GFiles<CR>
 nnoremap <leader>fi       :Files<CR>
 nnoremap <leader><CR>     :Buffers<CR>
+
+" Turn off bells
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
 
 " Show line numbers
 set number
@@ -85,8 +92,30 @@ set hlsearch
 set autoindent
 
 " autoformat
-noremap <F3> :Autoformat<CR>
+"noremap <F3> :Autoformat<CR>
 " autoformat on save
-au BufWrite * :Autoformat
+"au BufWrite * :Autoformat
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
 
 "let g:formatterpath = ['/usr/local/bin']
+
+" golang highlighting
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+"let g:go_highlight_types = 1
+
+"let g:go_auto_sameids = 1
+
+"let g:go_fmt_command = "goimports"
+
+" yaml formatting and config
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml let b:autoformat_autoindent=0
