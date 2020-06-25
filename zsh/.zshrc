@@ -23,6 +23,9 @@ unsetopt correct
 # Use vim
 export EDITOR=/usr/bin/vim
 
+# Flutter
+export PATH="$PATH:$HOME/src/flutter/bin"
+
 # Go
 export GOPATH="$HOME/go"
 export PATH="$(go env GOROOT)/bin:$GOPATH/bin:$PATH"
@@ -47,7 +50,7 @@ setopt no_share_history
 [ -f $HOME/.secrets ] && source $HOME/.secrets
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$HOME/.rvm/bin:$PATH"
 
 
 # make less better and more colorful
@@ -62,3 +65,10 @@ export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
 export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
+
+# Brew-based OpenSSL
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+export PATH="/usr/local/sbin:$PATH"

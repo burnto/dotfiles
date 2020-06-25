@@ -1,0 +1,32 @@
+{
+  "diffEditor.ignoreTrimWhitespace": false,
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "go.autocompleteUnimportedPackages": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#333333",
+    "statusBar.foreground": "#94cf8f"
+  },
+  "files.associations": {
+    "*.gohtml": "html"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Aurora X"
+}
