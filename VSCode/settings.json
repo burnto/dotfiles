@@ -11,7 +11,9 @@
     "statusBar.foreground": "#94cf8f"
   },
   "files.associations": {
-    "*.gohtml": "html"
+    "*.gohtml": "html",
+    "*.liquid": "html",
+    "*.html": "html"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -28,5 +30,14 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Aurora X"
+  "[go]": {
+    "editor.autoClosingBrackets": "never"
+  },
+
+  "workbench.colorTheme": "Aurora X",
+  "window.zoomLevel": 0,
+  "html.autoClosingTags": false,
+  "javascript.autoClosingTags": false,
+  "typescript.autoClosingTags": false,
+  "editor.multiCursorModifier": "alt"
 }
